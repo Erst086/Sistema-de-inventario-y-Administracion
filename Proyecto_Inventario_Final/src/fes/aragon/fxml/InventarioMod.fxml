@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="340.0" prefWidth="644.0" style="-fx-background-color: #FAF3E2; -fx-border-color: #000000;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fes.aragon.controlador.InventarioModController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f0ddaa" height="70.0" layoutX="1.0" stroke="BLACK" strokeType="INSIDE" width="642.0" />
+      <ImageView fitHeight="61.0" fitWidth="63.0" layoutX="582.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Recursos/FesLogo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="14.0" layoutY="14.0" prefHeight="34.0" prefWidth="242.0" text="Inventario">
+         <font>
+            <Font name="Century" size="20.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView glyphName="TASKS" />
+         </graphic>
+      </Label>
+      <HBox layoutX="1.0" layoutY="89.0" prefHeight="206.0" prefWidth="644.0">
+         <children>
+            <TableView fx:id="tblInventario" prefHeight="206.0" prefWidth="640.0" stylesheets="@../css/application2.css">
+              <columns>
+                  <TableColumn fx:id="clmProduc" prefWidth="140.0" text="Nombre del producto" />
+                  <TableColumn fx:id="clmPrecvent" prefWidth="120.0" text="Precio de venta" />
+                  <TableColumn fx:id="clmCantidad" prefWidth="120.0" text="Cantidad" />
+                  <TableColumn fx:id="clmRefrigerado" prefWidth="140.0" text="Producto refrigerado" />
+                  <TableColumn fx:id="clmCaducidad" prefWidth="120.0" text="Caducidad" />
+              </columns>
+               <HBox.margin>
+                  <Insets left="1.0" />
+               </HBox.margin>
+               <opaqueInsets>
+                  <Insets left="20.0" />
+               </opaqueInsets>
+            </TableView>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </HBox>
+      <HBox layoutX="-3.0" layoutY="295.0" prefHeight="34.0" prefWidth="644.0" spacing="140.0">
+         <children>
+            <Button fx:id="btnNuevo" mnemonicParsing="false" onAction="#nuevo" stylesheets="@../css/application2.css" text="Nuevo">
+               <HBox.margin>
+                  <Insets left="40.0" />
+               </HBox.margin>
+               <graphic>
+                  <FontAwesomeIconView glyphName="FILE_ALT" size="20" />
+               </graphic>
+               <font>
+                  <Font name="Century" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnModificar" layoutX="170.0" layoutY="17.0" mnemonicParsing="false" onAction="#modificar" stylesheets="@../css/application2.css" text="Modificar">
+               <graphic>
+                  <FontAwesomeIconView glyphName="EDIT" size="20" />
+               </graphic>
+               <font>
+                  <Font name="Century" size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="btnCancelar" mnemonicParsing="false" onAction="#cancelar" stylesheets="@../css/application2.css" text="Cancelar">
+               <HBox.margin>
+                  <Insets right="40.0" />
+               </HBox.margin>
+               <graphic>
+                  <FontAwesomeIconView glyphName="CLOSE" size="20" />
+               </graphic>
+               <font>
+                  <Font name="Century" size="14.0" />
+               </font>
+            </Button>
+         </children>
+         <padding>
+            <Insets top="7.0" />
+         </padding>
+      </HBox>
+   </children>
+</Pane>

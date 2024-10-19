@@ -1,0 +1,19 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+.button{
+	-fx-background-color: #FAF3E2;
+}
+.button:hover {
+	-fx-background-color: #668594;
+}
+.button:pressed {
+	-fx-background-color: #80B4C3;
+}
+.table-row-cell:highlighted {
+    -fx-background-color: #FF0000;
+}
+.table-row-cell:selected-row {
+    -fx-background-color: #9AE96E;
+}
+
+
